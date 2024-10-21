@@ -109,8 +109,3 @@ This repository contains two independent projects as part of the Zeotap Intern A
 
 ---
 
-## Bonus Features (Optional):
-If you wish to implement additional functionality:
-- Add error handling for invalid rule strings in the Rule Engine.
-- Enable users to modify existing rules in the Rule Engine.
-- Enhance the Weather Processing System to track additional metrics (e.g., humidity, wind speed) and include them in the summaries.
