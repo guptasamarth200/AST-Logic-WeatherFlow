@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine</title>
+    <script>
+        async function createRule() {
+            const ruleString = document.getElementById('rule').value;
+            const response = await fetch('http://127.0.0.1:5000/create_rule', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rule_string: ruleString })
+            });
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data);
+        }
+
+        async function combineRules() {
+            const rules = document.getElementById('combined-rules').value.split(',');
+            const operator = document.getElementById('operator').value;
+            const response = await fetch('http://127.0.0.1:5000/combine_rules', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rules: rules, operator: operator })
+            });
+            const data = await response.json();
+            document.getElementById('output').innerText = JSON.stringify(data);
+        }
+    </script>
+</head>
+<body>
+    <h1>Rule Engine</h1>
+    <div>
+        <h3>Create Rule</h3>
+        <input type="text" id="rule" placeholder="age > 30">
+        <button onclick="createRule()">Create Rule</button>
+    </div>
+
+    <div>
+        <h3>Combine Rules</h3>
+        <input type="text" id="combined-rules" placeholder="rule1, rule2">
+        <select id="operator">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+        </select>
+        <button onclick="combineRules()">Combine Rules</button>
+    </div>
+
+    <div id="output"></div>
+</body>
+</html>
