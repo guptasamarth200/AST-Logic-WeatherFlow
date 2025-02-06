@@ -50,8 +50,8 @@ Real-Time Weather Monitoring System – Fetch, analyze, and alert weather condit
 
 This repository contains two independent projects as part of the WeatherRule Intern Assignment:
 
-1. **[Rule Engine with AST](https://github.com/guptasamarth200/WeatherRule-intern-assignment/tree/rule-engine)**: A rule engine that dynamically creates, combines, and evaluates rules using an Abstract Syntax Tree (AST).
-2. **[Weather Data Processing System](https://github.com/guptasamarth200/WeatherRule-intern-assignment/tree/weather-processing)**: A real-time weather monitoring system that fetches and processes data from OpenWeatherMap.
+1. **[Rule Engine with AST](https://github.com/guptasamarth200/AST-Logic-WeatherFlow/tree/rule-engine)**: A rule engine that dynamically creates, combines, and evaluates rules using an Abstract Syntax Tree (AST).
+2. **[Weather Data Processing System](https://github.com/guptasamarth200/AST-Logic-WeatherFlow/tree/weather-processing)**: A real-time weather monitoring system that fetches and processes data from OpenWeatherMap.
 
 - **Rule Engine**: The Rule Engine allows users to create custom eligibility rules and combine them using logical operations (`AND`, `OR`). The engine processes these rules based on input data, evaluating whether users meet the specified conditions. It's powered by an Abstract Syntax Tree (AST) to parse and execute complex rule structures.
 
